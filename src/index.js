@@ -1,10 +1,19 @@
-const element = document.createElement("p");
-element.textContent = "qwe";
+import "./style.css";
+import { GAME_MODES } from "./constants/gameModes";
 
-const body = document.getElementById("root");
+const modeContainer = document.querySelector(".game-mode");
 
-if (body) {
-  body.append(element);
+const modesHtml = GAME_MODES.map(
+  (mode, index) => `
+  <label class="mode-label">
+    <input type="radio" name="snake-mode" value="${mode.id}" ${index === 0 ? "checked" : ""}>
+    <span class="mode-text">${mode.label}</span>
+  </label>
+`,
+).join("");
+
+if (modeContainer) {
+  modeContainer.innerHTML = modesHtml;
 } else {
-  console.log("failed to find body");
+  console.log("Failed to compare game mode");
 }

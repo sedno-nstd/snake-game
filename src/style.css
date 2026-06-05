@@ -1,0 +1,145 @@
+:root {
+  --bg-sidebar: #007a87;
+  --bg-score-box: #005f69;
+  --btn-color: #2e5c56;
+  --bg-score-current: #00565f;
+  --btn-text: #ffffff;
+  --title-color: #7be3a1;
+  --default-text-color: #ffffff;
+  --arrow-bg: #1a31b4;
+
+  --canvas-size: 600px;
+}
+
+body {
+  background-color: #1a1a1a;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-pannel {
+  background-color: var(--bg-sidebar);
+  display: flex;
+  flex-direction: column;
+  max-width: 290px;
+}
+
+.game-title {
+  display: flex;
+  color: var(--title-color);
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 20px 0;
+  gap: 15px;
+  font-size: 26px;
+  font-weight: 600;
+  width: 100%;
+  color: var(--default-text-color);
+}
+.best-score,
+.current-score {
+  display: flex;
+  flex: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 12px 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.best-score {
+  background-color: var(--btn-color);
+}
+
+.current-score {
+  background-color: var(--bg-score-current);
+}
+.best-score__value {
+  display: flex;
+  padding-right: 50px;
+}
+
+.current-score__value {
+  display: flex;
+  padding-right: 50px;
+}
+
+.game-mode {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--btn-color);
+  padding: 5px 0px 20px 10px;
+}
+
+.mode-label {
+  font-size: 24px;
+  font-weight: 400;
+  color: var(--default-text-color);
+  user-select: none;
+  -webkit-user-select: none;
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.mode-label input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  background-color: var(--default-text-color);
+  position: relative;
+}
+
+.mode-label input[type="radio"]:checked {
+  background-color: var(--arrow-bg);
+  border: 0px;
+}
+
+.mode-label input[type="radio"]:checked::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 7px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--default-text-color);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: auto;
+  padding: 30px;
+}
+
+.game-btn {
+  display: flex;
+  background-color: var(--btn-color);
+  color: #ffffff;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}

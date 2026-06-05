@@ -4,8 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <div class="game-wrapper">
+      <div class="game-pannel">
+        <h1 class="game-title">Snake Game</h1>
+
+        <div class="score-container">
+          <div class="best-score">
+            <span class="best-score__title">Best:</span>
+            <span class="best-score__value">0</span>
+          </div>
+          <div class="current-score">
+            <span class="current-score__title">Current:</span>
+            <span class="current-score__value">0</span>
+          </div>
+        </div>
+
+        <div class="game-mode"></div>
+
+        <div class="buttons-container">
+          <button id="btn-play" class="game-btn">Play</button>
+          <button id="btn-exit" class="game-btn">Exit</button>
+          <button id="btn-menu" class="game-btn hidden">Menu</button>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
