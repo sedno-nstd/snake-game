@@ -1,5 +1,5 @@
 import { Container, Graphics } from "pixi.js";
-import { Grid } from "./Grid";
+import { Grid } from "./Grid.js";
 import { CONFIG } from "../config";
 import { RandomColor } from "../hooks/randomColor";
 

@@ -1,10 +1,10 @@
 import { Application } from "pixi.js";
-import { Grid } from "./Grid";
+import { Grid } from "./Grid.js";
 import { UiManager } from "../ui/UIManager";
-import { Snake } from "./Snake";
-import { Food } from "./Food";
+import { Snake } from "./Snake.js";
+import { Food } from "./Food.js";
 import { getRandomFreeCell } from "../hooks/spawnUtils";
-import { Walls } from "./Walls";
+import { Walls } from "./Walls.js";
 
 export class Game {
   constructor() {
