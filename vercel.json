@@ -1,0 +1,8 @@
+{
+  "build": {
+    "env": {
+      "OUTPUT_DIR": "dist"
+    }
+  },
+  "outputDirectory": "dist"
+}
