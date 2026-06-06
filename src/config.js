@@ -1,0 +1,12 @@
+export const CONFIG = {
+  CELL_SIZE: 24,
+  GRID_COUNT: 20,
+  BORDER_TILES: 1,
+
+  COLORS: {
+    FIELD_BG: 0x4e4e4e,
+    BORDER: 0x965a15,
+    BORDER_STROKE: 0x73430f,
+    GRID_LINE: 0x454545,
+  },
+};

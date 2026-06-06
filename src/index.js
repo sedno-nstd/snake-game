@@ -1,5 +1,6 @@
 import "./style.css";
 import { GAME_MODES } from "./constants/gameModes";
+import { Game } from "./core/Game";
 
 const modeContainer = document.querySelector(".game-mode");
 
@@ -17,3 +18,9 @@ if (modeContainer) {
 } else {
   console.log("Failed to compare game mode");
 }
+
+const game = new Game();
+
+game.init().catch((err) => {
+  console.error("Error to run game", err);
+});
