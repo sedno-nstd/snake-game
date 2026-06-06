@@ -8,5 +8,6 @@ export const CONFIG = {
     BORDER: 0x965a15,
     BORDER_STROKE: 0x73430f,
     GRID_LINE: 0x454545,
+    WALL_COLOR: 0x111111,
   },
 };

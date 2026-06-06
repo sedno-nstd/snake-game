@@ -17,13 +17,9 @@ export class Grid {
         const x = col * CONFIG.CELL_SIZE;
         const y = row * CONFIG.CELL_SIZE;
 
-        const isBorder =
-          row < CONFIG.BORDER_TILES ||
-          row >= this.totalCells - CONFIG.BORDER_TILES ||
-          col < CONFIG.BORDER_TILES ||
-          col >= this.totalCells - CONFIG.BORDER_TILES;
-
         graphics.rect(x, y, CONFIG.CELL_SIZE, CONFIG.CELL_SIZE);
+
+        const isBorder = this.isCellBorder(col, row);
 
         if (isBorder) {
           graphics.fill(CONFIG.COLORS.BORDER);
@@ -35,5 +31,14 @@ export class Grid {
       }
     }
     this.container.addChild(graphics);
+  }
+
+  isCellBorder(x, y) {
+    return (
+      y < CONFIG.BORDER_TILES ||
+      y >= this.totalCells - CONFIG.BORDER_TILES ||
+      x < CONFIG.BORDER_TILES ||
+      x >= this.totalCells - CONFIG.BORDER_TILES
+    );
   }
 }
